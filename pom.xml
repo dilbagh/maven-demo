@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- The groupId, artifactId and version of this project, which uniquely 
+		identify this project -->
+	<groupId>in.dsbakshi.demos</groupId>
+	<artifactId>maven-demo-app</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+
+	<!-- packging of this project, building this project will generate an artifact 
+		of this type -->
+	<packaging>pom</packaging>
+
+	<!-- Descriptive name of this project -->
+	<name>Maven Demo Application Parent</name>
+
+	<!-- Properties available for maven throughout this POM, child POMs and 
+		POMs which import this POM -->
+	<properties>
+
+		<!-- Java version level whose language features can be used -->
+		<maven.compier.source>1.8</maven.compier.source>
+
+		<!-- Java version level the compiled classes of this project would be compatible 
+			to run -->
+		<maven.compier.target>1.8</maven.compier.target>
+	</properties>
+
+</project>
