@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!-- Parent project of this project -->
+	<parent>
+		<groupId>in.dsbakshi.demos</groupId>
+		<artifactId>maven-demo-app</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<!-- artifactId of this project, the groupId and version are inherited form 
+		the parent project if not mentioned explicitly -->
+	<artifactId>maven-module-webapp</artifactId>
+
+	<!-- packging of this project -->
+	<packaging>war</packaging>
+
+	<name>Maven Demo Webapp Module</name>
+
+	<!-- Actual dependencies of this project -->
+	<dependencies>
+
+		<!-- Services module dependency -->
+		<dependency>
+			<groupId>in.dsbakshi.demos</groupId>
+			<artifactId>maven-module-services</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<!-- Servlet API dependecy, provided by servlet container -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+	</dependencies>
+
+</project>

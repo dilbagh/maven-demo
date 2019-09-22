@@ -21,11 +21,47 @@
 	<properties>
 
 		<!-- Java version level whose language features can be used -->
-		<maven.compier.source>1.8</maven.compier.source>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
 
 		<!-- Java version level the compiled classes of this project would be compatible 
 			to run -->
-		<maven.compier.target>1.8</maven.compier.target>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+
+		<!-- User defined property -->
+		<java.version>1.8</java.version>
+
 	</properties>
+
+	<!-- Project aggregation, these modules will be built if this project is 
+		built -->
+	<modules>
+		<module>maven-module-webapp</module>
+		<module>maven-module-utility</module>
+		<module>maven-module-services</module>
+	</modules>
+
+	<!-- Dependencies Management (not actual dependencies, only to be referred 
+		by child projects) -->
+	<dependencyManagement>
+
+		<dependencies>
+
+			<!-- JUnit dependency -->
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.12</version>
+				<scope>test</scope>
+			</dependency>
+
+			<!-- Guava dependency -->
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>28.1-jre</version>
+			</dependency>
+		</dependencies>
+
+	</dependencyManagement>
 
 </project>
