@@ -16,11 +16,21 @@
 
 	<name>Maven Demo Utility Module</name>
 
+	<!-- Actual dependencies of this project -->
 	<dependencies>
+
+		<!-- Guava dependency, version taken from dependency management -->
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
 		</dependency>
+
+		<!-- JUnit dependency -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+
 	</dependencies>
 
 </project>
